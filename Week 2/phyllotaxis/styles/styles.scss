@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&display=swap');
+/* Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    overflow: hidden;
+}
+i{
+    color:rgba(255, 255, 255, 0.3);
+    transition: color 0.2s ease-in-out;
+    z-index: 2;
+    font-size: 3rem !important;
+    position: absolute;
+    top:95vh;
+    left: 48vw;
+    display: inline-block;
+    cursor: pointer;
+    // :hover{ - > does not work for some reason
+    //     color:rgb(255, 255, 255);
+    // }
+}
+/* CUSTOM SLIDER CSS ADAPTED FROM /* CUSTOM SLIDER CSS ADAPTED FROM  */
+input[type=range] {
+    -webkit-appearance: none;
+
+    height: 5px;
+    border-radius: 5px;
+    background: #ffffff;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+input[type=range]:hover {
+    opacity: 1;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #e40362;
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #e40362;
+    cursor: pointer;
+}
+/* CUSTOM SLIDER CSS ADAPTED FROM /* CUSTOM SLIDER CSS ADAPTED FROM  */
+
+#sliders{
+    font-family: 'Dosis', sans-serif;
+    margin: 1rem;
+    background-color:rgba(255,255,255,0.05);
+    position: absolute;
+    bottom: 0;
+    right:0;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    label{
+        display: inline;
+        color: white;
+    }
+    button{
+        border:none;
+        background-color: rgba(255,255,255,0.05);
+        color: white;
+        padding:1rem 3rem 1rem 3rem;
+        border-radius: 1rem;
+        z-index: 99999;
+        &:hover{
+            background-color: rgba(255, 0, 119, 0.726);
+        }
+      
+    }
+}
+
+.spacer{
+    margin: 1rem;
+}

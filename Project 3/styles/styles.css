@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap");
+:root {
+  --primary-color: #f5aa07;
+  --secondary-color: #16073b;
+  --font-color: #ffffff;
+  --bg-color: rgb(8, 8, 8);
+  --heading-color: #f50762;
+  --track-color:#fff;
+  --toggle:#eeeeee;
+  --link-color:aquamarine;
+}
+
+[data-theme="light"] {
+  --primary-color: #f5aa07;
+  --secondary-color: #eeeeee;
+  --font-color: #424242;
+  --bg-color: rgb(231, 231, 231);
+  --heading-color: #f50762;
+  --track-color:white;
+  --toggle:rgb(8, 8, 8);
+  --link-color:rgb(54, 5, 119);
+}
+
+::-moz-selection {
+  background-color: #ffa228;
+  /* WebKit/Blink Browsers */
+  color: white;
+}
+
+::selection {
+  background-color: #ffa228;
+  /* WebKit/Blink Browsers */
+  color: white;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* unvisited link */
+a:link {
+  color: var(--link-color);
+}
+
+/* visited link */
+a:visited {
+  color: var(--link-color);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgba(255, 0, 98, 0.959);
+}
+
+/* selected link */
+a:active {
+  color: rgba(255, 0, 98, 0.959);
+}
+
+#description > h3:nth-child(1) {
+  color: orange;
+}
+
+body {
+  overflow: hidden;
+}
+
+#titleAl {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  float: right;
+  letter-spacing: 2rem;
+  padding: 0.8rem 0 0.8rem 0.8rem;
+  color: #e70e61;
+}
+
+#titleAl.current {
+  letter-spacing: 1.5rem;
+}
+
+#covidSearch {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#App {
+  font-family: 'Dosis', sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20vw 80vw;
+      grid-template-columns: 20vw 80vw;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+#App aside {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  height: 100vh;
+  overflow-y: auto;
+}
+
+#App aside article {
+  font-family: 'Roboto', sans-serif;
+  padding: 1rem;
+}
+
+#App aside #start h1 {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.7rem;
+  color: orange;
+}
+
+#App aside #start {
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  width: 17vw;
+  text-align: right;
+}
+
+#App aside #start p {
+  color: #e70e61;
+}
+
+#App aside h3 {
+  font-family: 'Roboto', sans-serif;
+  color: orange;
+  padding-bottom: 0.6rem;
+}
+
+#App aside p {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 0.4rem;
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  max-width: 1fr;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+a.articles {
+  cursor: pointer;
+}
+
+a.articles :hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+a.articles h3 {
+  color: orange;
+  padding-bottom: 0.6rem;
+}
+
+a.articles .subHead {
+  float: right;
+  font-size: 0.7rem;
+}
+
+a.articles p, a.articles li {
+  color: var(--font-color);
+}
+
+a.articles .author, a.articles .subHead {
+  color: var(--primary-color);
+}
+
+a.articles:link {
+  text-decoration: none;
+}
+
+a.articles:visited {
+  text-decoration: none;
+}
+
+a.articles:hover {
+  text-decoration: none;
+}
+
+a.articles:active {
+  text-decoration: none;
+}
+
+.MuiButton-label {
+  color: #202020 !important;
+  background-color: white !important;
+  padding: 0.6rem !important;
+}
+
+.MuiCard-root {
+  color: white !important;
+  background-color: black !important;
+}
+
+.makeStyles-demo-66 {
+  color: white !important;
+  background-color: black !important;
+}
+
+.MuiTypography-root {
+  color: white !important;
+}
+
+.tile {
+  padding: 1.4rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 1rem;
+}
+
+.tile span {
+  margin-left: 2rem;
+}
+
+.tile img {
+  display: inline !important;
+  max-width: 1.4rem;
+  max-height: 1.4rem;
+}
+
+.tile button {
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: 0.32em;
+  padding: 0.7rem 2rem 0.7rem 2rem;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tile button:hover {
+  background-color: #fc0362;
+  color: white;
+}
+
+.btna {
+  float: right;
+}
+
+#alJazz {
+  letter-spacing: 0.7rem !important;
+}
+
+.marker {
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Marker tweaks */
+.mapboxgl-popup-close-button {
+  display: none;
+}
+
+.mapboxgl-popup-content {
+  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+  padding: 0;
+  width: 100%;
+}
+
+.mapboxgl-popup-content-wrapper {
+  padding: 1%;
+}
+
+.mapboxgl-popup-content {
+  background: #c95c49;
+  color: #fff;
+  margin: 0;
+  display: block;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+  font-weight: 700;
+  margin-top: -15px;
+}
+
+.mapboxgl-popup-content .Past {
+  background: #b9b9b9;
+  color: #fff;
+  margin: 0;
+  display: block;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+  font-weight: 700;
+  margin-top: -15px;
+}
+
+.mapboxgl-popup-content .Current {
+  background: #ad1f06;
+  color: #fff;
+  margin: 0;
+  display: block;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+  font-weight: 700;
+  margin-top: -15px;
+}
+
+.mapboxgl-popup {
+  padding-bottom: 1rem;
+}
+
+.mapboxgl-popup-content p {
+  padding: 1rem;
+}
+
+#themeToggleBtn {
+  background-color: var(--toggle);
+  opacity: 0.7;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+  position: fixed;
+  z-index: 1;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+#themeToggleBtn:hover {
+  opacity: 1;
+}
+
+#themeToggleBtn:focus {
+  outline: none;
+}
+
+aside article h1 {
+  position: absolute;
+  font-weight: 800;
+  color: rgba(255, 165, 0, 0.6);
+  width: 20vw;
+  top: 50vh;
+}
+
+#controls {
+  position: absolute;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scrollbar-face-color: #646464;
+  scrollbar-base-color: #646464;
+  scrollbar-3dlight-color: #646464;
+  scrollbar-highlight-color: #646464;
+  scrollbar-track-color: var(--track-color);
+  scrollbar-arrow-color: #000;
+  scrollbar-shadow-color: #646464;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-button {
+  background-color: #666;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #646464;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: var(--track-color);
+}
+
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #09c4a4;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #646464;
+}
+
+::-webkit-resizer {
+  background-color: #666;
+}
+
+#controls {
+  top: 1vh;
+  right: 4vw;
+}
+
+#controls button {
+  border: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background-color: rgba(92, 92, 92, 0.6);
+  color: black;
+}
+
+#controls button:hover {
+  background-color: rgba(255, 165, 0, 0.9);
+  color: white;
+}
+
+#controls button:active {
+  color: white;
+}
+
+#controls button[data-checked="true"] {
+  background-color: rgba(0, 128, 0, 0.6);
+  color: white;
+}
+
+#controls button[data-checked="false"] {
+  background-color: rgba(92, 92, 92, 0.6);
+  color: black;
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+  opacity: 0.5 !important;
+  background-color: transparent !important;
+}
+
+.mapboxgl-ctrl-logo {
+  opacity: 0.08 !important;
+}
+/*# sourceMappingURL=styles.css.map */

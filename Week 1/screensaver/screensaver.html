@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>First Canvas</title>
+	<style type="text/css">
+	canvas{
+		border:1px solid gray;
+	}
+	</style>
+	<script>
+		// #0 - in this class we will always use ECMAScript 5's "strict" mode
+		// See what 'use strict' does here:
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode
+		'use strict';
+		
+		// #1 call the `init` function after the pages loads
+        window.onload = init;
+        window.onresize = init;
+        let ctx;
+
+
+		function init(){
+			console.log("page loaded!");
+			// #2 Now that the page has loaded, start drawing!
+			
+			// A - `canvas` variable points at <canvas> tag
+			let canvas = document.querySelector('canvas');
+			
+			// B - the `ctx` variable points at a "2D drawing context"
+            ctx = canvas.getContext('2d');
+            canvasSetup();
+            cls(ctx);
+			
+            update(ctx);
+        }
+
+
+        function canvasSetup(){
+            console.log("oof")
+            ctx.canvas.width = window.innerWidth - 200;
+            ctx.canvas.height = window.innerHeight- 200;
+        }
+
+
+        function getRandomColor(){
+            function getByte(){
+                return 0 + Math.round(Math.random() * 300);
+            }
+            return "rgba(" + getByte() + "," + getByte() + "," + getByte() + ",1)";
+        }
+
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+
+        function cls(ctx)
+        {
+            ctx.clearRect(0, 0, window.innerWidth - 200, window.innerHeight - 200);
+            setTimeout(function(){cls(ctx);}, getRandomInt(5000, 8000));
+        }
+
+
+        function drawRandomRect(ctx) {
+		  ctx.save();
+			ctx.beginPath();
+			ctx.rect(getRandomInt(0,window.innerWidth-350),getRandomInt(0,window.innerHeight-350),getRandomInt(20,80),getRandomInt(20,80));
+			ctx.closePath();
+			ctx.fillStyle = getRandomColor(); 
+			ctx.fill();	  
+			ctx.restore();
+        }
+        
+
+        function update(ctx)
+		{
+		  requestAnimationFrame(
+              function() { 
+                update(ctx); 
+            });
+		  drawRandomRect(ctx);
+		}
+
+
+	</script>
+</head>
+<body>
+	<canvas>
+		Get a real browser!
+	</canvas>
+</body>
+</html>

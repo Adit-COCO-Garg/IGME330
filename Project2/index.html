@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Audio Visualizer</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="styles/style.css" type="text/css" rel="stylesheet" />
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="favicon_io/site.webmanifest">
+	<script src="src/agLIB.js"></script>
+	<script src="./src/loader.js" type="module"></script>
+</head>
+
+<body>
+	<main>
+		<h1>Audio Visualizer</h1>
+		
+		<section id="playback">
+			<canvas width="800" height="400"></canvas>
+			<section id="trackInfo">
+				<button id="playButton">
+					<i class="material-icons pausePlay">play_arrow</i>
+				</button>
+				<span id="uiTimeStamp1"></span>
+				<input type="range" value="0" id="progressBar" step="1">
+				<span id="uiTimeStamp2"></span>
+				<button id="fsButton">
+					<i class="material-icons">fullscreen</i>
+				</button>
+			</section>
+		</section>
+		<section>
+			<i class="material-icons">volume_up</i>
+			<input type="range" id="volumeSlider" min="0" max="2" value="0.8" step="0.01">
+			<span id="volumeLabel"></span>
+		</section>
+		<section>
+			<label for="convolverValue">IR value</label>
+			<input type="range" id="convolverValue" min="0" max="100" value="86" step="2">
+			<span id="convolverLabel">86</span>
+		</section>
+		<section id="trackControls">
+
+			<label>Track:</label>
+			<select id="trackSelect"></select>
+
+		</section>
+		<section id="lofiOptions">
+			<h2>Lofi-style IR effects</h2>
+		</section>
+		<section id="audioVizDataType">
+			<h2>Visualization data type</h2>
+			<span>
+				<label for="waveform">Waveform</label>
+				<input type="radio" name="dataType" id="waveform">
+			</span>
+			<span>
+				<label for="frequency">Frequency</label>
+				<input type="radio" name="dataType" id="frequency" checked>
+			</span>
+		</section>
+		<section>
+			<h2>Visualizer effects</h2>
+			<span class="visualizationEffect"><input type="checkbox" id="gradientCB" checked><label for="gradientCB">Show Gradient</label></span>
+			<span class="visualizationEffect"><input type="checkbox" id="barsCB" checked><label for="barsCB">Show Line</label></span>
+			<span class="visualizationEffect"><input type="checkbox" id="quadCB"><label for="quadCB">Show quad curve</label></span>
+			<span class="visualizationEffect"><input type="checkbox" id="circlesCB"><label for="circlesCB">Show Circles</label></span>
+			<span class="visualizationEffect"><input type="checkbox" id="imageCB"><label for="imageCB">Show Image</label></span>
+			<span class="visualizationEffect"><input type="checkbox" id="noiseCB"><label for="noiseCB">Show Noise</label></span>
+			<span class="visualizationEffect"><input type="checkbox" id="invertCB"><label for="invertCB">Show Inverted</label></span>
+			<span class="visualizationEffect"><input type="checkbox" id="embossCB"><label for="embossCB">Show Embossed</label></span>
+		</section>
+	</main>
+</body>
+
+</html>

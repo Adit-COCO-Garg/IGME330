@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+:root {
+    --primary-color: #f5aa07;
+    --secondary-color: #16073b;
+    --font-color: #ffffff;
+    --bg-color: rgb(8, 8, 8);
+    --heading-color: #f50762;
+    --track-color:#fff;
+    --toggle:#eeeeee;
+    --link-color:aquamarine;
+    
+}
+
+[data-theme="light"] {
+    --primary-color: #f5aa07;
+    --secondary-color: #eeeeee;
+    --font-color: #424242;
+    --bg-color: rgb(231, 231, 231);
+    --heading-color: #f50762;
+    --track-color:white;
+    --toggle:rgb(8, 8, 8);
+    --link-color:rgb(54, 5, 119);
+}
+::selection {
+    background-color: #ffa228; /* WebKit/Blink Browsers */
+    color: white;
+  }
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    // overflow: hidden;
+}
+ /* unvisited link */
+ a:link {
+    color: var(--link-color);
+  }
+  
+/* visited link */
+a:visited {
+color: var(--link-color);
+}
+
+/* mouse over link */
+a:hover {
+color: rgba(255, 0, 98, 0.959);
+}
+
+/* selected link */
+a:active {
+color: rgba(255, 0, 98, 0.959);
+}
+#description > h3:nth-child(1){
+    color: orange;
+}
+body{
+    overflow: hidden;
+  }
+
+  #titleAl{
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+    float: right;
+    letter-spacing: 2rem;
+    padding: 0.8rem 0 0.8rem 0.8rem;
+    color: rgb(231, 14, 97);
+    &.current{
+        letter-spacing: 1.5rem;
+    }
+}
+#covidSearch{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    text-align: center;
+}
+#App{
+    font-family: 'Dosis', sans-serif;
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+    grid-template-rows:1fr;
+    aside{
+        grid-column: 1 / 2;
+        height: 100vh;
+        background-color: var(--bg-color);
+        color:var(--font-color);
+        height:100vh;
+        overflow-y: auto;
+         
+        article{
+            font-family: 'Roboto', sans-serif;
+            padding: 1rem;
+        }
+        
+        #start h1{
+            
+            margin:0 0 1rem 0;
+            font-size: 1.3rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-style: italic;
+            letter-spacing: 0.7rem;
+            color: orange;
+        }
+        #start{
+            width: 100%;
+            position: absolute;
+            top: 45%;
+            width: 17vw;
+            text-align: right;
+        }
+        #start p{
+            color: rgb(231, 14, 97);
+        }
+        h3{
+            font-family: 'Roboto', sans-serif;
+            color: orange;
+            padding-bottom: 0.6rem;
+        }
+        p{
+            font-family: 'Roboto', sans-serif;
+            margin-top:0.4rem;
+        }
+      }
+}
+img{
+    width: 100%;
+    // display: block; /* remove extra space below image */
+}
+
+main{
+    max-width: 1fr;
+    grid-column: 2 / 3;
+    
+
+}
+
+a.articles{
+    cursor: pointer;
+    :hover{
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    h3{
+        color: orange;
+        padding-bottom: 0.6rem;
+    }
+    .subHead{
+       
+        float: right;
+        font-size: 0.7rem;
+    }
+    p, li{
+        color: var(--font-color);
+    }
+    .author, .subHead{
+        color: var(--primary-color);
+    }
+    &:link{
+        text-decoration: none;
+    }
+    &:visited{
+        text-decoration: none;
+    }
+    &:hover{
+        text-decoration: none;
+    }
+    &:active{
+        text-decoration: none;
+    }
+}
+
+.MuiButton-label{
+    
+    color: rgb(32, 32, 32) !important;
+    background-color: rgb(255, 255, 255) !important;
+    padding: 0.6rem !important;
+}
+
+.MuiCard-root{
+    color: white !important;
+    background-color:rgb(0, 0, 0) !important;
+}
+
+.makeStyles-demo-66{
+    color: white !important;
+    background-color:rgb(0, 0, 0) !important;
+}
+
+.MuiTypography-root{
+    color: white !important;
+}
+.tile{
+    padding:1.4rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 1rem;
+    
+    span{
+        margin-left: 2rem;
+    }
+    img{
+        display: inline !important;
+        max-width: 1.4rem;
+        max-height: 1.4rem;
+    }
+    button{
+        border: none;
+        text-decoration: none;
+        cursor: pointer;
+        letter-spacing: 0.32em;
+        padding:0.7rem 2rem 0.7rem 2rem;
+        
+        color:white;
+        
+        background-color: rgba(255, 255, 255, 0.1);
+        &:hover{
+            background-color: #fc0362;
+            color: white;
+        } 
+    }
+}
+.btna{
+    float: right;
+}
+#alJazz{
+    letter-spacing: 0.7rem !important;
+}
+
+.marker {
+    background-size: cover;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  /* Marker tweaks */
+.mapboxgl-popup-close-button {
+    display: none;
+  }
+  
+  .mapboxgl-popup-content {
+    font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+    padding: 0;
+    width:100%;
+  }
+  
+  .mapboxgl-popup-content-wrapper {
+    padding: 1%;
+  }
+  
+  .mapboxgl-popup-content{
+    background: #c95c49;
+    color: #fff;
+    margin: 0;
+    display: block;
+    padding: 10px;
+    border-radius: 3px 3px 0 0;
+    font-weight: 700;
+    margin-top: -15px;
+  }
+
+  .mapboxgl-popup-content .Past{
+    background: #b9b9b9;
+    color: #fff;
+    margin: 0;
+    display: block;
+    padding: 10px;
+    border-radius: 3px 3px 0 0;
+    font-weight: 700;
+    margin-top: -15px;
+  }
+
+  .mapboxgl-popup-content .Current{
+    background: #ad1f06;
+    color: #fff;
+    margin: 0;
+    display: block;
+    padding: 10px;
+    border-radius: 3px 3px 0 0;
+    font-weight: 700;
+    margin-top: -15px;
+  }
+
+
+  .mapboxgl-popup {
+    padding-bottom: 1rem;
+  }
+  
+  .mapboxgl-popup-content p{
+      padding:1rem;
+  }
+
+ 
+#themeToggleBtn{
+    background-color:var(--toggle);
+    opacity: 0.7;
+    &:hover{
+        opacity: 1;
+    }
+    padding: 1rem;
+    border-radius:1.5rem;
+    border:none;
+    cursor:pointer;
+    &:focus{
+        outline:none;
+    }
+    border-radius:100%;
+    transition:background-color 0.5s ease-in-out;
+    position: fixed;
+    z-index: 1;
+    right:1rem;
+    bottom:1rem;
+}
+
+aside article h1{
+    position: absolute;
+    font-weight: 800;
+    color:rgba($color: orange, $alpha: 0.6);
+    width: 20vw;
+    top:50vh;
+}
+
+#controls{
+    position: absolute;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+html {
+  scrollbar-face-color: #646464;
+  scrollbar-base-color: #646464;
+  scrollbar-3dlight-color: #646464;
+  scrollbar-highlight-color: #646464;
+  scrollbar-track-color: var(--track-color);
+  scrollbar-arrow-color: #000;
+  scrollbar-shadow-color: #646464;
+ 
+}
+
+::-webkit-scrollbar { width: 8px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #646464;}
+::-webkit-scrollbar-track-piece { background-color: var(--track-color);}
+::-webkit-scrollbar-thumb { height: 50px; background-color: rgb(9, 196, 164); border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #646464;}
+::-webkit-resizer { background-color: #666;}
+
+
+#controls{
+    top: 1vh;
+    right: 4vw;
+    button{
+        border: none;
+        text-decoration: none;
+        padding:0.5rem 1rem;
+        //background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(92, 92, 92, 0.6);
+        color: black;
+        &:hover{
+            background-color: rgba($color:  orange, $alpha: 0.9);
+            color: white;
+        }
+        &:active{
+            color: white;
+        }
+
+        &[data-checked="true"]{
+            background-color: rgba(0,128,0,0.6); color: white;
+        }
+        &[data-checked="false"]{
+            background-color: rgba(92, 92, 92, 0.6); color: black;
+        }
+    }
+}
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib{
+    opacity: 0.5 !important;
+    background-color: transparent !important;
+}
+
+.mapboxgl-ctrl-logo{
+    opacity: 0.08 !important;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>WEEK 1A - Excercise</title>
+  <style>
+    * { font-size: 1.5em; }
+    button {
+      height: 50px;
+      width: 100px;
+      
+    }
+  </style>
+  <script>
+    "use strict";
+    
+    /*
+    console.log("Day 1");
+
+    let a = 10;
+    
+    let b;
+    
+    var v = 44;
+    
+    let myArray = ["red", "green", "blue"];
+    
+    let bob = myArray.pop();
+    
+    bob = bob + " jkhkh k";
+    
+    myArray.push(bob);
+    
+    
+    if (true) {
+      var aVar = 33;
+      
+      b = 20;
+      
+      b += 5;
+      
+    }
+    
+    
+    
+    
+    console.log("a = " + a);
+    console.log("b = " + b);
+    
+    console.log(myArray);
+    */
+    
+    function init()
+    {
+      // Create our shared stylesheet:
+      const sheet = new CSSStyleSheet();
+      sheet.replaceSync('p {color: red; background-color:yellow ;}');
+
+
+      document.querySelector("button").onclick = clicked;
+      document.querySelector("p").style.color = clicked;
+
+      document.adoptedStyleSheets = [sheet];
+
+    }
+    
+    function clicked() {
+      
+      let firstInput = document.querySelector("#first");
+      let lastInput = document.querySelector("#last");
+
+      let fName = firstInput.value;
+      let lName = lastInput.value;
+
+      
+      if (fName.length == 0) fName = "Please type in your first name";
+      if (fName.length == 0) lName = "Please type in your last name";
+
+      updateName(fName, lName);
+    }
+    
+    function updateName(fName, lName) {
+      let p = document.querySelector("#yourName");
+      
+      p.innerHTML = `${fName} ${lName}`;
+
+      //debugger;
+
+    }
+    
+    window.onload = init;
+    
+  </script>
+</head>
+<body>
+  	<button>Click Me!</button>
+  	<input placeholder="Type Your First Name" id="first">
+  	<input placeholder="Type Your Last Name" id="last">
+  	<p id="yourName">???</p>
+</body>
+</html>

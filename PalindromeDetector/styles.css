@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+p,
+input[type=text] {
+    color: rgb(230, 89, 89);
+}
+
+.palindrome {
+    color: rgb(6, 180, 50) !important
+}
+
+h1, section, article{
+    padding: 0.5rem 1rem;
+    margin-left: 4rem;
+}
+
+main{
+    background-color: rgb(238, 238, 238);
+    border-radius: 4rem;
+}

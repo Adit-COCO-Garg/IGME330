@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/agLIB.js"></script>
+    <script src="scripts/index.js"></script>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <button class="btna" type="button">
+      <i class="material-icons pausePlay">pause</i>
+    </button> 
+    <div id ="sliders">
+      <div class="spacer">
+        <label>SPEED
+          <input type="range" id="fps" name="speed" step="1" min="1" max="500 " value="100">
+        </label>
+      </div>
+      <div class="spacer">
+        <labeL>SPACING
+          <input type="range" id="c" name="spacing" min="1" max="30" value="6">
+        </labeL>
+      </div>
+      <label>DIVERGENCE
+        <input type="range" id="divergence" name="divergence" min="1" max="100" value="1">
+      </label>
+
+      <div class="spacer">
+      <label>RADIUS
+        <input type="range" id="radius" name="radius" min="2" max="100" value="2">
+
+      </label>
+      </div>
+      <button id="resetBtn">RESET</button>
+    </div>
+
+
+    
+</body>
+</html>
