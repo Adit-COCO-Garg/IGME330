@@ -15,10 +15,10 @@ async function scrapeProduct(url) {
     await page.goto(url);
     await page.click("#app > main > section > div > div > div.login-actions-container > div > button");
     await page.waitFor("#username");
-    await page.type("#username", "ag9126@rit.edu");
+    await page.type("#username", "----");
     await page.click("#continue-button");
     await page.waitFor("#password");
-    await page.type("#password", "R!L*4H3hL3kh56j");
+    await page.type("#password", "----");
     await page.click("#signinbutton");
     await page.goto("https://quantum-computing.ibm.com/composer/621e24d1a77c7fe24347e4852e3fdfe4")
     await page.waitFor("#app > main > section > div > div > div:nth-child(1) > div:nth-child(1) > div > div.tool-header > div > div.actions > div.experiment-actions > button");
