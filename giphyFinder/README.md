@@ -8,7 +8,7 @@ My love for gifs and memes called out to me and I proceeded on a 2 week journey 
 You are crazy - my prof said. And soon enough after racking my brains I came up with something I was proud of... The Giphy Finder. It's far from my ideal vision but hey it's somewhere on the right way!  
 
 ![Giphy finder sample](GitHubAssets/giphyfinder.gif)  
-Try out GiphyFinder for youself! 👉 [click me](https://people.rit.edu/ag9126/235/GiphyFinder/ "A link to giphy finder")🐱‍🐉
+Try out GiphyFinder for youself! 👉 [click me](https://people.rit.edu/ag9126/330/exercises/giphyFinder/ "A link to giphy finder")🐱‍🐉
 ### Resources Used:
 #### Giphy API
 For this project I am using the [Giphy API](https://developers.giphy.com/).
